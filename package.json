@@ -12,7 +12,8 @@
   "types": "build/index.d.ts",
   "scripts": {
     "start": "NODE_ENV=production npm run serve",
-    "build": "rimraf build && npm cache verify && tsc && npm run test && npm run doc",
+    "build": "rimraf build && npm cache verify && tsc",
+    "build-all": "rimraf build && npm cache verify && tsc && npm run test && npm run doc",
     "build-sources": "tsc",
     "serve": "node build/index.js",
     "prewatch": "rimraf build && tsc",
