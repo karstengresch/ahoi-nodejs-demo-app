@@ -18,7 +18,8 @@
     "serve": "node build/index.js",
     "prewatch": "rimraf build && tsc",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node,Logger\" -c \"yellow.bold,cyan.bold,green.bold\" \"tsc -w\" \"nodemon --delay 5 build/index.js\"",
-    "test": "NODE_ENV=test jest --forceExit --coverage --verbose --detectOpenHandles",
+
+    "test-all": "NODE_ENV=test jest --forceExit --coverage --verbose --detectOpenHandles",
     "tslint": "tslint -c tslint.json -p tsconfig.json",
     "doc": "./node_modules/.bin/compodoc ./src -p tsconfig.json -d ./doc --theme gitbook --hideGenerator --disableCoverage --toggleMenuItems default"
   },
